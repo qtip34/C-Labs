@@ -6,7 +6,12 @@ using System.Threading.Tasks;
 
 namespace lab2
 {
-    class Developer
+    public class Developer : Worker
     {
+        public Developer(string surname, string headSurname, List<string> subSurname, List<string> duties) : base(surname, headSurname, subSurname)
+        {
+            Duties = duties;
+        }
+        public List<string> Duties { get; set; }
     }
 }
