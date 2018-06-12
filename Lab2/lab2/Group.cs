@@ -10,6 +10,7 @@ namespace lab2
     public class Group
     {
         private List<Worker> Workers;
+        
         public Group(List<Worker> workers)
         {
             Workers = workers;
@@ -29,5 +30,13 @@ namespace lab2
             var str = JsonConvert.SerializeObject(Workers);
             Console.Write(str);
         }
+        public void FindViaSurname(string surname)
+        {      
+            Worker result = Workers.Find(x => x.Surname.Contains(surname));
+            var str = JsonConvert.SerializeObject(result);
+            Console.Write(str);
+        }
+       
+
     }
 }
