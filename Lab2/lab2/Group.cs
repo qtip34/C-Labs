@@ -10,9 +10,9 @@ namespace lab2
     public class Group
     {
         private List<Worker> Workers;
-        public Group(List<Worker> Workers)
+        public Group(List<Worker> workers)
         {
-
+            Workers = workers;
         }
         public Group AddWorker(Worker worker)
         {
